@@ -17,4 +17,7 @@ fun main() {
         3 -> "The value is 3"
         else -> "The value is not 3"
     }
+
+    println(message)
+    println(getMessageWithWhen(3))
 }
