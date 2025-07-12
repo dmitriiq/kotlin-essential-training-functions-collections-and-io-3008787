@@ -2,7 +2,7 @@
 private fun printGreeting() = println("Hello Kotlin")
 
 fun main() {
-    fun getGreeting() = "Hello Kotlin"
+    fun getGreeting(greeting: String = "Hi", thingToGreet: String = "World") = "$greeting $thingToGreet"
 
-    println(getGreeting())
+    println(getGreeting(thingToGreet = "World", greeting = "Hey there"))
 }
