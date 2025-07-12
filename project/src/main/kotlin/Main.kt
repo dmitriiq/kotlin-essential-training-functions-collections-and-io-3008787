@@ -6,6 +6,12 @@
 // function takes a formatting function parameter
 // function should print the result of the passed format function
 
-fun main() {
+fun printFormattedName(first: String, second: String, format: (String, String) -> String) {
+    println(format(first, second))
+}
 
+fun main() {
+    printFormattedName("Vorname", "Nachname") { first, second ->
+        "$second, $first"
+    }
 }
