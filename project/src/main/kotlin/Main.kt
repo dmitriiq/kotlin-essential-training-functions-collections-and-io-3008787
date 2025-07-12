@@ -10,8 +10,14 @@ fun printFormattedName(first: String, second: String, format: (String, String) -
     println(format(first, second))
 }
 
+val fancyFormat: (String, String) -> String = { a, b ->
+    "first name is $a and last name is $b"
+}
+
 fun main() {
     printFormattedName("Vorname", "Nachname") { first, second ->
         "$second, $first"
     }
+
+    printFormattedName("Nate", "Ebel", fancyFormat)
 }
