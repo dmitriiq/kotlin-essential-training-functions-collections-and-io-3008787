@@ -1,14 +1,16 @@
 
-var greetingFunction: () -> Unit = {
-    println("Hello Kitlin")
+var greetingFunction: (String) -> String = {
+    println("Hello $it")
+    it
 }
 
 fun main() {
-    greetingFunction()
+    println(greetingFunction("Kotlin"))
+    greetingFunction("Wold")
 
-    greetingFunction = {
-        println("Hello World!")
+    greetingFunction = { thingToReturn ->
+        "Hello $thingToReturn!"
     }
 
-    greetingFunction.invoke()
+    println(greetingFunction.invoke("there"))
 }
