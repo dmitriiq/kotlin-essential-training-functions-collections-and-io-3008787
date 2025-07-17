@@ -26,4 +26,27 @@ fun main() {
     testScores.put(222, 72.1)
     testScores.remove(222)
     testScores.replace(111, 98.7)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    val m = mutableMapOf(8 to 9.0, 9 to 9.1)
+
+    for ((id, s) in m)
+        println("score for ${id} is ${s}")
+
+    println(m.containsKey(8))
+    println(m.containsValue(9.1))
+//    println(m.contains(9.0))
 }
